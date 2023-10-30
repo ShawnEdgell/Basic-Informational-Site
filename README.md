@@ -1,4 +1,4 @@
-# Node.js test site
+# Node.js/Express test site
 
 Pages
 - Home
