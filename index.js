@@ -1,7 +1,9 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = 8080;
+
+// Use Replit's environment variable for the port, or fallback to 8080
+const PORT = process.env.PORT || 8080;
 
 // Serve static files from the current directory
 app.use(express.static(path.join(__dirname)));
@@ -24,5 +26,5 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
